@@ -64,3 +64,28 @@ body {
 .anterior{
     float: left;
 }
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para las flechas flotantes */
+
+.arrow-container {
+    position: fixed; /* Hace que las flechas sean flotantes */
+    top: 18%; 
+    transform: translateY(-50%); 
+    width: 100%; 
+    z-index: 1000;
+}
+
+.anterior {
+    position: absolute; /* flecha izquierda */
+    left: 0px; /* Margen izquierdo */
+}
+
+.siguiente {
+    position: absolute; /* flecha derecha */
+    right: 0px; /* Margen derecho */
+}
