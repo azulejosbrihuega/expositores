@@ -22,10 +22,10 @@
     <style>
         /* Preloader: pantalla de carga con fondo negro y el logo centrado */
         #preloader {
-            position: absolute; /* Posición absoluta para centrar */
+            position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* Centrado exacto */
+            transform: translate(-50%, -50%);
             background-color: black;
             z-index: 1000;
         }
@@ -38,9 +38,9 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Evitar desplazamiento horizontal */
+            overflow-x: hidden;
             background-color: black; /* Fondo negro mientras está cargando */
-            padding-top: env(safe-area-inset-top); /* Asegura que el body no se superponga al notch */
+            padding-top: env(safe-area-inset-top);
             height: 100vh; /* Asegura que el body tenga altura completa */
         }
 
@@ -55,13 +55,14 @@
             color: #ffffff;
             padding: 20px;
             text-align: center;
-            padding-top: env(safe-area-inset-top); /* Asegura que el header no se superponga al notch */
+            padding-top: env(safe-area-inset-top);
+            transition: padding-top 0.3s ease; /* Añadido para animar el cambio de posición */
         }
 
         /* Estilo general del cuerpo después de la carga */
         body.loaded {
-            background-color: rgb(18, 152, 144); /* Color de fondo una vez cargado el contenido */
-            overflow: auto; /* Habilita el desplazamiento vertical después de que el preloader desaparezca */
+            background-color: rgb(18, 152, 144);
+            overflow: auto;
         }
 
         /* Otros estilos CSS proporcionados */
@@ -143,8 +144,8 @@
     </div>
 
     <!-- Contenido de la página -->
-    <header>
-        <img src="logomoral3.png" width="325px">
+    <header id="header">
+        <img src="logomoral3.png" width="325px" id="header-logo">
     </header>
 
     <hr>
@@ -157,6 +158,15 @@
             setTimeout(() => {
                 document.body.classList.add('loaded');
             }, 1500); // 1.5 segundos de retraso
+
+            // Detectar si el dispositivo es un iPhone
+            const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            
+            if (isIphone) {
+                // Si es iPhone, ajustar el logo subiéndolo un 15%
+                const header = document.getElementById('header');
+                header.style.paddingTop = '5%'; // Subir el logo un 15% (ajustable)
+            }
         });
     </script>
 </body>
