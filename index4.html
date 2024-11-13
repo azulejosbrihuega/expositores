@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> <!-- Ajuste de viewport para aprovechar todo el espacio en dispositivos con notch -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Brihuega Moralzarzal</title>
     <link rel="stylesheet" href="estilos.css">
 
@@ -15,8 +15,10 @@
 
     <!-- WebApp -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Cambia la barra de estado a negro -->
-    <meta name="theme-color" content="#000000"> <!-- Color del navegador y barra de estado en Android -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Solución para el color de la barra de estado en iOS y otros dispositivos -->
+    <meta name="theme-color" content="black">
 
     <!-- Estilos internos -->
     <style>
@@ -43,6 +45,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             overflow: hidden; /* Evita el desplazamiento cuando el preloader está visible */
+            background-color: black; /* Fondo negro mientras está cargando */
         }
 
         /* Una vez que la página se ha cargado, quitar el preloader */
@@ -58,7 +61,7 @@
             text-align: center;
         }
 
-        /* Estilo general del cuerpo */
+        /* Estilo general del cuerpo después de la carga */
         body.loaded {
             background-color: rgb(18, 152, 144); /* Color de fondo una vez cargado el contenido */
             overflow: auto; /* Habilita el desplazamiento después de que el preloader desaparezca */
@@ -156,7 +159,7 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.body.classList.add('loaded');
-            }, 1250); // 3 segundos de retraso
+            }, 1500); // 3 segundos de retraso
         });
     </script>
 </body>
