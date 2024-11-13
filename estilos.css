@@ -90,21 +90,19 @@ body {
     right: 0px; /* Margen derecho */
 }
 /* Estilo del preloader */
-#preloader {
+#loader-wrapper .loader-section {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000000; /* Fondo negro */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999; /* Asegura que esté encima de todo */
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
 }
-
-/* Tamaño del logo */
-.preloader-logo {
-    width: 150px; /* Ajusta el tamaño del logo */
-    height: auto;
+ 
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+ 
+#loader-wrapper .loader-section.section-right {
+    right: 0;
 }
