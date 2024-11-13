@@ -1,22 +1,22 @@
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const preloader = document.getElementById("preloader");
+document.addEventListener("DOMContentLoaded", function() {
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("content");
 
-        // Oculta el preloader después de que la página haya cargado o tras un máximo de 3 segundos
-        function hidePreloader() {
-            preloader.style.transition = "opacity 0.5s ease"; // Transición de desvanecimiento
-            preloader.style.opacity = "0"; // Desvanece el preloader
+    // Función para ocultar el preloader
+    function hidePreloader() {
+        preloader.style.transition = "opacity 0.5s ease"; // Transición de desvanecimiento
+        preloader.style.opacity = "0"; // Desvanece el preloader
 
-            // Espera a que termine la transición antes de eliminar el preloader
-            setTimeout(() => {
-                preloader.style.display = "none"; // Oculta completamente el preloader
-            }, 500); // Tiempo de espera para coincidir con el tiempo de transición
-        }
+        // Espera a que termine la transición antes de eliminar el preloader
+        setTimeout(() => {
+            preloader.style.display = "none"; // Oculta completamente el preloader
+            content.style.display = "block"; // Muestra el contenido de la página
+        }, 500); // Tiempo de espera para coincidir con el tiempo de transición
+    }
 
-        // También oculta el preloader cuando la página se carga completamente
-        window.addEventListener("load", hidePreloader);
+    // Llama a la función hidePreloader cuando se haya cargado completamente la página
+    window.addEventListener("load", hidePreloader);
 
-        // Configura el temporizador de 3 segundos para ocultar el preloader, incluso si la página no está completamente cargada
-        setTimeout(hidePreloader, 3000);
-    });
-</script>
+    // Configura un temporizador de 3 segundos para ocultar el preloader, incluso si la página no está completamente cargada
+    setTimeout(hidePreloader, 3000);
+});
