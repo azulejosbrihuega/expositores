@@ -45,6 +45,7 @@
             overflow: hidden;
             background-color: black; /* Fondo negro mientras está cargando */
             padding-top: env(safe-area-inset-top); /* Espacio seguro para la barra de estado */
+            height: 100vh; /* Asegura que el body tenga altura completa */
         }
 
         /* Una vez que la página se ha cargado, quitar el preloader */
@@ -157,10 +158,9 @@
     <!-- JavaScript para quitar el preloader con un retraso de 1.5 segundos -->
     <script>
         window.addEventListener('load', () => {
-            // Aseguramos que el preloader desaparezca después de 1.5 segundos de carga
             setTimeout(() => {
                 document.body.classList.add('loaded');
-            }, 1500); // Retraso de 1.5 segundos
+            }, 1500); // 1.5 segundos de retraso
         });
     </script>
 </body>
