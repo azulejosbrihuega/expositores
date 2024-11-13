@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes, viewport-fit=cover">
     <title>Brihuega Moralzarzal</title>
     <link rel="stylesheet" href="estilos.css">
 
@@ -42,7 +42,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow: hidden;
+            overflow-x: hidden; /* Evitar desplazamiento horizontal */
             background-color: black; /* Fondo negro mientras está cargando */
             padding-top: env(safe-area-inset-top); /* Espacio seguro para la barra de estado */
             height: 100vh; /* Asegura que el body tenga altura completa */
@@ -65,7 +65,7 @@
         /* Estilo general del cuerpo después de la carga */
         body.loaded {
             background-color: rgb(18, 152, 144); /* Color de fondo una vez cargado el contenido */
-            overflow: auto; /* Habilita el desplazamiento después de que el preloader desaparezca */
+            overflow: auto; /* Habilita el desplazamiento vertical después de que el preloader desaparezca */
         }
 
         /* Otros estilos CSS proporcionados */
