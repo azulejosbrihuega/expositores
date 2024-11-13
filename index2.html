@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> <!-- Esto debería manejar el notch en iPhone -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Brihuega Moralzarzal</title>
     <link rel="stylesheet" href="estilos.css">
 
@@ -15,8 +15,9 @@
 
     <!-- WebApp -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- La barra de estado negra en iPhone -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+    <!-- Estilos internos -->
     <style>
         /* Preloader: pantalla de carga con fondo negro y el logo centrado */
         #preloader {
@@ -33,7 +34,7 @@
         }
 
         #preloader-logo {
-            width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+            width: 300px; /* Ajusta el tamaño del logo según sea necesario */
         }
 
         /* Estilo del body durante la carga */
@@ -41,8 +42,6 @@
             margin: 0;
             font-family: Arial, sans-serif;
             overflow: hidden; /* Evita el desplazamiento cuando el preloader está visible */
-            background-color: black; /* Fondo negro durante la carga */
-            height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
         }
 
         /* Una vez que la página se ha cargado, quitar el preloader */
@@ -50,28 +49,7 @@
             display: none;
         }
 
-        body.loaded {
-            background-color: rgb(18, 152, 144); /* Color de fondo después de la carga */
-            overflow: auto; /* Habilita el desplazamiento después de que el preloader desaparezca */
-        }
-
-        /* Asegurarse de que el body ocupe toda la pantalla */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Asegúrate de que la web ocupe toda la pantalla, incluyendo el área del notch */
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Evita que los elementos se muevan al cargar */
-            align-items: center;
-            min-height: 100%; /* Permite que el contenido ocupe toda la altura */
-        }
-
-        /* Estilos para el header */
+        /* Estilos del header */
         header {
             background-color: rgb(4, 13, 11);
             color: #ffffff;
@@ -79,36 +57,106 @@
             text-align: center;
         }
 
-        /* Ajuste para el iframe */
-        iframe {
-            width: 100%;
-            height: calc(100vh - 120px); /* Hace que el iframe ocupe todo el espacio restante */
-            border: none;
+        /* Estilo general del cuerpo */
+        body.loaded {
+            background-color: rgb(18, 152, 144); /* Color de fondo una vez cargado el contenido */
+            overflow: auto; /* Habilita el desplazamiento después de que el preloader desaparezca */
         }
+
+        /* Otros estilos CSS proporcionados */
+        .expo {
+            overflow: hidden;
+        }
+
+        #botonarriba {
+            background-color: #b9d455;
+            color: #000000;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .siguiente {
+            float: right;
+        }
+
+        .anterior {
+            float: left;
+        }
+
+        .arrow-container {
+            position: fixed;
+            top: 18%;
+            transform: translateY(-50%);
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .anterior {
+            position: absolute;
+            left: 0px;
+        }
+
+        .siguiente {
+            position: absolute;
+            right: 0px;
+        }
+
     </style>
-
 </head>
-<body>
 
+<body>
     <!-- Preloader: pantalla de carga con fondo negro y el logo centrado -->
     <div id="preloader">
         <img src="logomoral3.png" alt="Cargando..." id="preloader-logo">
     </div>
 
+    <!-- Contenido de la página -->
     <header>
         <img src="logomoral3.png" width="325px">
     </header>
 
     <hr>
 
-    <iframe src="buscador.html"></iframe>
+    <iframe src="buscador.html" width="100%" height="500"></iframe>
 
+    <!-- JavaScript para quitar el preloader con un retraso de 3 segundos -->
     <script>
-        // Esperar a que todo el contenido de la página se haya cargado antes de ocultar el preloader
-        window.onload = function() {
-            document.body.classList.add('loaded');
-        };
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 1500); // 1.5 segundos de retraso
+        });
     </script>
-
 </body>
 </html>
