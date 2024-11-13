@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> <!-- Para cubrir toda la pantalla en dispositivos con notch -->
     <title>Brihuega Moralzarzal</title>
     <link rel="stylesheet" href="estilos.css">
 
@@ -15,11 +15,9 @@
 
     <!-- WebApp -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Estilos internos -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Uso de black-translucent para evitar la barra blanca -->
     <style>
-        /* Estilos para el preloader */
+        /* Preloader: pantalla de carga con fondo negro y el logo centrado */
         #preloader {
             position: fixed;
             top: 0;
@@ -37,25 +35,60 @@
             width: 150px; /* Ajusta el tamaño del logo según sea necesario */
         }
 
-        /* Estilo del body */
+        /* Estilo del body durante la carga */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita el desplazamiento cuando el preloader está visible */
+            background-color: black; /* Fondo negro durante la carga */
+            height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
         }
 
-        /* Ocultar el contenido hasta que se haya cargado completamente */
+        /* Una vez que la página se ha cargado, quitar el preloader */
         body.loaded #preloader {
             display: none;
         }
 
+        body.loaded {
+            background-color: rgb(18, 152, 144); /* Color de fondo después de la carga */
+            overflow: auto; /* Habilita el desplazamiento después de que el preloader desaparezca */
+        }
+
+        /* Asegurarse de que el body ocupe toda la pantalla */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Asegúrate de que la web ocupe toda la pantalla, incluyendo el área del notch */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Evita que los elementos se muevan al cargar */
+            align-items: center;
+            min-height: 100%; /* Permite que el contenido ocupe toda la altura */
+        }
+
+        /* Estilos para el header */
         header {
+            background-color: rgb(4, 13, 11);
+            color: #ffffff;
+            padding: 20px;
             text-align: center;
-            margin: 20px 0;
+        }
+
+        /* Ajuste para el iframe */
+        iframe {
+            width: 100%;
+            height: calc(100vh - 120px); /* Hace que el iframe ocupe todo el espacio restante */
+            border: none;
         }
     </style>
-</head>
 
+</head>
 <body>
+
     <!-- Preloader: pantalla de carga con fondo negro y el logo centrado -->
     <div id="preloader">
         <img src="logomoral3.png" alt="Cargando..." id="preloader-logo">
@@ -67,15 +100,14 @@
 
     <hr>
 
-    <iframe src="buscador.html" width="100%" height="500"></iframe>
+    <iframe src="buscador.html"></iframe>
 
-    <!-- JavaScript para quitar el preloader con un retraso de 3 segundos -->
     <script>
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.body.classList.add('loaded');
-            }, 3000); // 3 segundos de retraso
-        });
+        // Esperar a que todo el contenido de la página se haya cargado antes de ocultar el preloader
+        window.onload = function() {
+            document.body.classList.add('loaded');
+        };
     </script>
+
 </body>
 </html>
