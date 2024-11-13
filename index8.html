@@ -22,15 +22,11 @@
     <style>
         /* Preloader: pantalla de carga con fondo negro y el logo centrado */
         #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: absolute; /* Posición absoluta para centrar */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centrado exacto */
             background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             z-index: 1000;
         }
 
@@ -44,7 +40,7 @@
             font-family: Arial, sans-serif;
             overflow-x: hidden; /* Evitar desplazamiento horizontal */
             background-color: black; /* Fondo negro mientras está cargando */
-            padding-top: env(safe-area-inset-top); /* Espacio seguro para la barra de estado */
+            padding-top: env(safe-area-inset-top); /* Asegura que el body no se superponga al notch */
             height: 100vh; /* Asegura que el body tenga altura completa */
         }
 
