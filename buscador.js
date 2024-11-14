@@ -23,3 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
         keywordsList.style.display = 'block'; 
     });
 });
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+        }, 1500);
+
+        const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isIphone) {
+            const preloaderLogo = document.getElementById('preloader-logo');
+            preloaderLogo.style.transform = 'translateY(-20%)';
+        }
+    });
+
