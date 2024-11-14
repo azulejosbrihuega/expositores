@@ -35,3 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();  // Evita la carga normal
+                document.querySelector("iframe").src = this.href;  // Carga en el iframe
+            });
+        });
+    });
+</script>
