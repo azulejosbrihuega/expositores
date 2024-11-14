@@ -23,39 +23,17 @@ document.addEventListener("DOMContentLoaded", function() {
         keywordsList.style.display = 'block'; 
     });
 });
-
 window.addEventListener('load', () => {
     setTimeout(() => {
         document.body.classList.add('loaded');
-    }, 1500);
+    }, 1500); // 1.5 segundos de retraso
 
+    // Detectar si el dispositivo es un iPhone
     const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    
     if (isIphone) {
+        // Si es iPhone, ajustar el logo subiéndolo un 20%
         const preloaderLogo = document.getElementById('preloader-logo');
         preloaderLogo.style.transform = 'translateY(-20%)';
     }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Espera a que el iframe esté cargado completamente antes de manipularlo
-    const iframe = document.getElementById('mainIframe');
-
-    // Función para interceptar los enlaces dentro del iframe
-    iframe.addEventListener('load', function() {
-        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        
-        // Interceptar todos los enlaces dentro del iframe
-        iframeDocument.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                // Prevenir el comportamiento por defecto (abrir el enlace en una nueva página)
-                event.preventDefault();
-
-                // Obtener la URL del enlace
-                const url = link.getAttribute('href');
-                
-                // Cargar la URL en el iframe
-                iframe.src = url;
-            });
-        });
-    });
 });
