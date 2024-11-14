@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Brihuega Moralzarzal</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="buscador.js"></script>
 
     <!-- Icono para navegadores de escritorio y compatibles -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -18,58 +17,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="theme-color" content="black">
-
-    <style>
-        /* Preloader: pantalla de carga con fondo negro y el logo centrado */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        #preloader-logo {
-            width: 300px;
-            transition: transform 0.3s ease;
-        }
-
-        /* Estilo del body durante la carga */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-            background-color: black;
-            padding-top: env(safe-area-inset-top);
-            height: 100vh;
-        }
-
-        body.loaded #preloader {
-            display: none;
-        }
-
-        body.loaded {
-            background-color: rgb(18, 152, 144);
-            overflow: auto;
-        }
-
-        /* Estilos para el iframe de pantalla completa */
-        iframe {
-            position: absolute;  /* Asegura que ocupe toda la pantalla */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;  /* Ocupa toda la altura de la pantalla */
-            border: none;
-        }
-
-        /* Otros estilos adicionales */
-    </style>
 </head>
 
 <body>
@@ -77,22 +24,10 @@
         <img src="logomoral3.png" alt="Cargando..." id="preloader-logo">
     </div>
 
-    <!-- Contenedor del iframe, que ahora ocupa toda la pantalla -->
-    <iframe name="WebApp" src="buscador.html"></iframe>
+    <!-- Contenedor del iframe con un id para ser referenciado -->
+    <iframe id="mainIframe" name="WebApp" src="buscador.html"></iframe>
 
-    <!-- JavaScript -->
-    <script>
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.body.classList.add('loaded');
-            }, 1500);
-
-            const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-            if (isIphone) {
-                const preloaderLogo = document.getElementById('preloader-logo');
-                preloaderLogo.style.transform = 'translateY(-20%)';
-            }
-        });
-    </script>
+    <!-- Enlace al archivo JavaScript -->
+    <script src="buscador.js"></script>
 </body>
 </html>
