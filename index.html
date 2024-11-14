@@ -2,13 +2,19 @@
 <html lang="es">
 <head>
 
-    <script>
+<script>
+        // Esperamos a que todo el contenido de la página esté cargado
         document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll("a");
+            const links = document.querySelectorAll("a"); // Seleccionamos todos los enlaces
             links.forEach(link => {
+                // Añadimos un listener de click a cada enlace
                 link.addEventListener("click", function(event) {
-                    event.preventDefault();  // Evita la carga normal
-                    document.querySelector("iframe[name='WebApp']").src = this.href;  // Carga en el iframe específico
+                    event.preventDefault();  // Evita que el enlace se abra de manera predeterminada
+                    // Seleccionamos el iframe por su nombre y cambiamos su src para cargar el enlace
+                    let iframe = document.querySelector("iframe[name='WebApp']");
+                    if (iframe) {
+                        iframe.src = this.href;  // Carga el enlace en el iframe
+                    }
                 });
             });
         });
