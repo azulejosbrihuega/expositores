@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<script>
-        // Esperamos a que todo el contenido de la página esté cargado
-        document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll("a"); // Seleccionamos todos los enlaces
-            links.forEach(link => {
-                // Añadimos un listener de click a cada enlace
-                link.addEventListener("click", function(event) {
-                    event.preventDefault();  // Evita que el enlace se abra de manera predeterminada
-                    // Seleccionamos el iframe por su nombre y cambiamos su src para cargar el enlace
-                    let iframe = document.querySelector("iframe[name='WebApp']");
-                    if (iframe) {
-                        iframe.src = this.href;  // Carga el enlace en el iframe
-                    }
-                });
-            });
-        });
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Brihuega Moralzarzal</title>
@@ -37,7 +18,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="theme-color" content="black">
 
-    <!-- Estilos internos -->
     <style>
         /* Preloader: pantalla de carga con fondo negro y el logo centrado */
         #preloader {
@@ -72,61 +52,33 @@
             display: none;
         }
 
-        header {
-            background-color: rgb(0, 0, 0);
-            color: #000000;
-            padding: 20px;
-            text-align: center;
-            padding-top: env(safe-area-inset-top);
-        }
-
         body.loaded {
             background-color: rgb(18, 152, 144);
             overflow: auto;
         }
 
         /* Estilos para el iframe de pantalla completa */
-        #search-iframe-container {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            transition: height 0.5s ease;
-            z-index: 1;
-        }
-
-        #search-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
-        }
-
-        .expanded {
-            position: fixed;
+        iframe {
+            position: absolute;  /* Asegura que ocupe toda la pantalla */
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: white;
-            z-index: 2000;
+            height: 100vh;  /* Ocupa toda la altura de la pantalla */
+            border: none;
         }
 
         /* Otros estilos adicionales */
     </style>
 </head>
+<link rel="stylesheet" href="estilos.css">
 
 <body>
     <div id="preloader">
         <img src="logomoral3.png" alt="Cargando..." id="preloader-logo">
     </div>
 
-    
-
-    <hr>
-
-    <!-- Contenedor del iframe -->
-      <iframe name="WebApp" src="buscador.html"></iframe>
-    </div>
+    <!-- Contenedor del iframe, que ahora ocupa toda la pantalla -->
+    <iframe name="WebApp" src="buscador.html"></iframe>
 
     <!-- JavaScript -->
     <script>
@@ -139,31 +91,6 @@
             if (isIphone) {
                 const preloaderLogo = document.getElementById('preloader-logo');
                 preloaderLogo.style.transform = 'translateY(-20%)';
-            }
-        });
-
-        // Función para alternar el modo expandido del iframe
-        const searchIframe = document.getElementById("search-iframe");
-        const iframeContainer = document.getElementById("search-iframe-container");
-
-        // Evento para alternar entre expandir y colapsar el iframe
-        searchIframe.addEventListener("click", () => {
-            // Alternar la clase para expandir o colapsar
-            iframeContainer.classList.toggle("expanded");
-
-            // Añadir o quitar la clase 'expanded' al body
-            if (iframeContainer.classList.contains("expanded")) {
-                document.body.style.overflow = "hidden"; // Desactiva el desplazamiento del body
-            } else {
-                document.body.style.overflow = "auto"; // Restaura el desplazamiento
-            }
-        });
-
-        // Si se hace clic fuera del iframe, colapsar
-        window.addEventListener("click", (event) => {
-            if (!iframeContainer.contains(event.target)) {
-                iframeContainer.classList.remove("expanded");
-                document.body.style.overflow = "auto"; // Restaurar el desplazamiento
             }
         });
     </script>
