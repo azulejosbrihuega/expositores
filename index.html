@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Brihuega Moralzarzal</title>
+    <title>INTERCEPTANDO</title>
     <link rel="stylesheet" href="estilos.css">
 
     <!-- Icono para navegadores de escritorio y compatibles -->
@@ -173,5 +173,29 @@
             }
         });
     </script>
+
+    <script>
+        document.addEventListener("click", function(event) {
+            if (event.target.tagName === 'A') {
+                event.preventDefault();  // Evita que el enlace abra una nueva página
+                handleLinkClick(event.target.href);  // Llama a la función para manejar el enlace
+            }
+        });
+
+        function handleLinkClick(url) {
+            history.pushState(null, '', url);  // Cambia la URL en la barra de direcciones sin recargar la página
+            loadContent(url);  // Llama a la función para cargar el contenido
+        }
+
+        function loadContent(url) {
+            fetch(url)  // Obtiene el contenido de la URL
+                .then(response => response.text())  // Convierte la respuesta a texto
+                .then(html => {
+                    document.body.innerHTML = html;  // Cambia solo el contenido del body
+                })
+                .catch(error => console.error('Error al cargar el contenido:', error));  // Maneja errores si los hay
+        }
+    </script>
+
 </body>
 </html>
