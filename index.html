@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>prueba2 </title>
+    <title>INTERCEPTANDO</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="512x512" href="iphonelogo.png">
@@ -153,6 +153,7 @@
             }
         });
 
+        // Interceptar clics en los enlaces
         document.addEventListener("click", function(event) {
             if (event.target.tagName === 'A') {
                 event.preventDefault();  // Evita que el enlace abra una nueva página
@@ -160,12 +161,14 @@
             }
         });
 
+        // Función para manejar el cambio de página
         function handleLinkClick(url) {
             history.pushState(null, '', url);  // Cambia la URL en la barra de direcciones sin recargar la página
-            loadContent(url);  // Llama a la función para cargar el contenido
+            loadPage(url);  // Llama a la función para cargar la nueva página
         }
 
-        function loadContent(url) {
+        // Función para cargar la nueva página completamente
+        function loadPage(url) {
             fetch(url)  // Obtiene el contenido de la URL
                 .then(response => response.text())  // Convierte la respuesta a texto
                 .then(html => {
