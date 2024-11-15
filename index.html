@@ -5,20 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>INTERCEPTANDO</title>
     <link rel="stylesheet" href="estilos.css">
-
-    <!-- Icono para navegadores de escritorio y compatibles -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
-
-    <!-- Iconos para dispositivos móviles (iOS y Android) -->
     <link rel="apple-touch-icon" sizes="512x512" href="iphonelogo.png">
     <link rel="icon" type="image/png" sizes="192x192" href="iphonelogo.png">
-
-    <!-- WebApp -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- Barra de estado completamente negra -->
-    <meta name="theme-color" content="black"> <!-- Barra de estado negra en navegadores y Web Apps -->
-
-    <!-- Estilos internos -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="black">
     <style>
         /* Preloader: pantalla de carga con fondo negro y el logo centrado */
         #preloader {
@@ -35,41 +27,36 @@
         }
 
         #preloader-logo {
-            width: 300px; /* Ajusta el tamaño del logo según sea necesario */
-            transition: transform 0.3s ease; /* Animación suave para la posición */
+            width: 300px;
+            transition: transform 0.3s ease;
         }
 
-        /* Estilo del body durante la carga */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             overflow: hidden;
-            background-color: black; /* Fondo negro mientras está cargando */
-            padding-top: env(safe-area-inset-top); /* Espacio seguro para la barra de estado */
-            height: 100vh; /* Asegura que el body tenga altura completa */
+            background-color: black;
+            padding-top: env(safe-area-inset-top);
+            height: 100vh;
         }
 
-        /* Una vez que la página se ha cargado, quitar el preloader */
         body.loaded #preloader {
             display: none;
         }
 
-        /* Estilos del header */
+        body.loaded {
+            background-color: rgb(18, 152, 144);
+            overflow: auto;
+        }
+
         header {
             background-color: rgb(0, 0, 0);
             color: #000000;
             padding: 20px;
             text-align: center;
-            padding-top: env(safe-area-inset-top); /* Asegura que el header no se superponga al notch */
+            padding-top: env(safe-area-inset-top);
         }
 
-        /* Estilo general del cuerpo después de la carga */
-        body.loaded {
-            background-color: rgb(18, 152, 144); /* Color de fondo una vez cargado el contenido */
-            overflow: auto; /* Habilita el desplazamiento después de que el preloader desaparezca */
-        }
-
-        /* Otros estilos CSS proporcionados */
         .expo {
             overflow: hidden;
         }
@@ -140,14 +127,11 @@
 
     </style>
 </head>
-
 <body>
-    <!-- Preloader: pantalla de carga con fondo negro y el logo centrado -->
     <div id="preloader">
         <img src="logomoral3.png" alt="Cargando..." id="preloader-logo">
     </div>
 
-    <!-- Contenido de la página -->
     <header>
         <img src="logomoral3.png" width="325px">
     </header>
@@ -156,25 +140,19 @@
 
     <iframe src="buscador.html" width="100%" height="500"></iframe>
 
-    <!-- JavaScript para quitar el preloader con un retraso de 1.5 segundos y ajustar la posición en iPhone -->
     <script>
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.body.classList.add('loaded');
-            }, 1500); // 1.5 segundos de retraso
+            }, 1500);
 
-            // Detectar si el dispositivo es un iPhone
             const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-            
             if (isIphone) {
-                // Si es iPhone, ajustar el logo subiéndolo un 20%
                 const preloaderLogo = document.getElementById('preloader-logo');
                 preloaderLogo.style.transform = 'translateY(-20%)';
             }
         });
-    </script>
 
-    <script>
         document.addEventListener("click", function(event) {
             if (event.target.tagName === 'A') {
                 event.preventDefault();  // Evita que el enlace abra una nueva página
@@ -191,11 +169,10 @@
             fetch(url)  // Obtiene el contenido de la URL
                 .then(response => response.text())  // Convierte la respuesta a texto
                 .then(html => {
-                    document.body.innerHTML = html;  // Cambia solo el contenido del body
+                    document.documentElement.innerHTML = html;  // Reemplaza todo el contenido de la página
                 })
                 .catch(error => console.error('Error al cargar el contenido:', error));  // Maneja errores si los hay
         }
     </script>
-
 </body>
 </html>
