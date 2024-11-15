@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Brihuega zalzal</title>
+    <title>Brihuega Moralzarzal</title>
     <link rel="stylesheet" href="estilos.css">
 
     <!-- Icono para navegadores de escritorio y compatibles -->
@@ -149,15 +149,12 @@
 
     <!-- Contenido de la página -->
     <header>
-        <img src="logomoral3.png" width="325px">
+    
     </header>
 
     <hr>
 
-    <!-- Aquí es donde se va a cargar el contenido -->
-    <div id="contenido">
-        <iframe src="buscador.html" width="100%" height="500"></iframe>
-    </div>
+    <iframe src="buscadorios.html" width="100%" height="100vh" style="border: none;" frameborder="0" scrolling="no"></iframe>
 
     <!-- JavaScript para quitar el preloader con un retraso de 1.5 segundos y ajustar la posición en iPhone -->
     <script>
@@ -175,30 +172,6 @@
                 preloaderLogo.style.transform = 'translateY(-20%)';
             }
         });
-
-        // Interceptar clics en los enlaces
-        document.addEventListener("click", function(event) {
-            if (event.target.tagName === 'A') {
-                event.preventDefault();  // Evita que el enlace abra una nueva página
-                handleLinkClick(event.target.href);  // Llama a la función para manejar el enlace
-            }
-        });
-
-        // Función para manejar el cambio de página
-        function handleLinkClick(url) {
-            history.pushState(null, '', url);  // Cambia la URL en la barra de direcciones sin recargar la página
-            loadPage(url);  // Llama a la función para cargar la nueva página
-        }
-
-        // Función para cargar la nueva página completamente
-        function loadPage(url) {
-            fetch(url)  // Obtiene el contenido de la URL
-                .then(response => response.text())  // Convierte la respuesta a texto
-                .then(html => {
-                    document.getElementById('contenido').innerHTML = html;  // Reemplaza el contenido dentro del div 'contenido'
-                })
-                .catch(error => console.error('Error al cargar el contenido:', error));  // Maneja errores si los hay
-        }
     </script>
 </body>
 </html>
