@@ -1,26 +1,32 @@
+/* Evitar el desplazamiento horizontal global */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Impide el desplazamiento horizontal */
+}
+
+/* Estilo del header */
 header {
     background-color: rgb(0, 0, 0);
     color: #000000;
     padding: 20px;
     text-align: center;
-
 }
 
+/* Fondo del body */
 body {
     background-color: rgb(18, 152, 144);
 }
 
+/* Contenedor de expo */
 .expo {
     overflow: hidden;
-
 }
 
+/* Estilo para el botón de arriba */
 #botonarriba {
-
-
     background-color: #b9d455;
     color: #000000;
-
 }
 
 /* Estilos para el menú desplegable */
@@ -57,35 +63,21 @@ body {
     background-color: #3e8e41;
 }
 
-.siguiente{
-    float: right;
-}
-
-.anterior{
-    float: left;
-}
-/* Estilo general */
-body {
-    margin: 0;
-    padding: 0;
-}
-
 /* Estilo para las flechas flotantes */
-
 .arrow-container {
-    position: fixed; /* Hace que las flechas sean flotantes */
-    top: 18%; 
-    transform: translateY(-50%); 
-    width: 100%; 
+    position: fixed;
+    top: 18%;
+    transform: translateY(-50%);
+    width: 100%;
     z-index: 1000;
 }
 
 .anterior {
-    position: absolute; /* flecha izquierda */
-    left: 0px; /* Margen izquierdo */
+    position: absolute;
+    left: 0px;
 }
 
 .siguiente {
-    position: absolute; /* flecha derecha */
-    right: 0px; /* Margen derecho */
+    position: absolute;
+    right: 0px;
 }
