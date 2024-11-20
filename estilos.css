@@ -81,3 +81,69 @@ body {
     position: absolute;
     right: 0px;
 }
+
+/* Campo de búsqueda */
+#searchInput {
+    width: 50%; /* Ocupa la mitad del ancho de la página */
+    padding: 12px 10px; /* Márgenes del buscador */
+    font-size: 15px; /* Tamaño de fuente */
+    border: 0px solid #dcdcdc; /* Bordes */
+    border-radius: 20px; /* Borde redondeado */
+    outline: none;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    position: fixed;
+    top: 0px;
+    left: 50%; /* Lo posiciona en el centro de la página */
+    transform: translateX(-50%); /* Ajusta para que quede centrado exacto */
+    z-index: 1000;
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 10px; /* Margen izquierdo */
+}
+
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+    #searchInput {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        left: 0; /* Alineado a la izquierda */
+        transform: translateX(0); /* Elimina el ajuste de traducción */
+        padding-left: 10px; /* Mantiene el margen izquierdo */
+    }
+}
+
+
+/* Lista de resultados */
+#keywordsList {
+    width: 50%; /* Ocupa la mitad del ancho de la página en pantallas grandes */
+    padding: 12px 2px;
+    font-size: 18px; /* Tamaño de fuente grande y legible */
+    border: 0px solid #ffffff00; /* Bordes grises claros */
+    border-radius: 24px; /* Bordes completamente redondeados */
+    outline: none;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    max-height: calc(100vh - 60px); /* Altura máxima para ocupar el espacio restante debajo del buscador */
+    overflow-y: auto; /* Añadir scroll si el contenido es largo */
+    position: absolute; /* Coloca la lista debajo del buscador */
+    top: 15px; /* Deja espacio para el buscador */
+    left: 50%; /* Lo posiciona en el centro de la página */
+    transform: translateX(-50%); /* Ajusta para que quede centrado exacto */
+}
+
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+    #keywordsList {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        left: 0; /* Alineado a la izquierda */
+        transform: translateX(0); /* Elimina el ajuste de traducción */
+    }
+}
+
+/* Elementos individuales de la lista */
+#keywordsList li {
+    padding: 12px 20px;
+    font-size: 15px; /* Tamaño de fuente uniforme */
+    cursor: pointer;
+}
+
+#keywordsList li:hover {
+    background-color: #76767656; /* Fondo gris claro al pasar el cursor */
+}
