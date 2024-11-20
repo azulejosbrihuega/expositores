@@ -103,7 +103,7 @@ body {
 /* Media query para pantallas móviles */
 @media (max-width: 768px) {
     #searchInput {
-        width: 90%; /* El campo de búsqueda ocupa el 90% del ancho en pantallas pequeñas */
+        width: 95%; /* El campo de búsqueda ocupa el 90% del ancho en pantallas pequeñas */
         padding: 12px 10px; /* Mantener un padding consistente */
         box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
         margin-left: auto; /* Centra el campo desde la izquierda */
