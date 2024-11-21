@@ -85,7 +85,7 @@ body {
 /* Campo de búsqueda */
 #searchInput {
     width: 50%; /* Ocupa la mitad del ancho de la página */
-    padding: 12px 10px; /* Márgenes del buscador */
+    padding: 12px 40px 12px 10px; /* Deja espacio a la derecha para el icono */
     font-size: 15px; /* Tamaño de fuente */
     border: 0px solid #dcdcdc; /* Bordes */
     border-radius: 20px; /* Borde redondeado */
@@ -98,7 +98,13 @@ body {
     z-index: 1000;
     text-align: left; /* Alinea el texto a la izquierda */
     padding-left: 10px; /* Margen izquierdo */
+    background-color: white; /* Fondo blanco */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="orange" width="24" height="24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Posición del icono */
+    background-size: 24px 24px; /* Ajusta el tamaño del icono */
 }
+
 
 /* Media query para pantallas móviles */
 @media (max-width: 768px) {
@@ -128,6 +134,10 @@ body {
     top: 15px; /* Deja espacio para el buscador */
     left: 50%; /* Lo posiciona en el centro de la página */
     transform: translateX(-50%); /* Ajusta para que quede centrado exacto */
+}
+/* Color del texto del buscador */
+#searchInput::placeholder {
+    color: grey; /* Cambia el color del texto del placeholder a naranja */
 }
 
 /* Media query para pantallas móviles */
