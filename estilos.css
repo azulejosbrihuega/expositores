@@ -137,7 +137,7 @@ body {
 }
 /* Color del texto del buscador */
 #searchInput::placeholder {
-    color: grey; /* Cambia el color del texto del placeholder a naranja */
+    color: grey; 
 }
 
 /* Media query para pantallas móviles */
