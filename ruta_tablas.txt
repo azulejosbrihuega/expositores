@@ -428,3 +428,106 @@ expositor10b-12 = https://docs.google.com/spreadsheets/d/1TH1SL1PmQyBgDuuDPNOvpW
 expositor10b-13 = https://docs.google.com/spreadsheets/d/1P_Ow4eki-dI52eGjLsR8mPsq62azqvO0KjWRYZ4Msww/edit?gid=0#gid=0
 
 expositor10b-14 = https://docs.google.com/spreadsheets/d/1iFCnjW4rDCqe4B_qM6bjPLpYyzhYAbYrSzZIDzOuMqI/edit?gid=0#gid=0
+
+-- Expositor 11B -- 
+
+expositor11b-1 = https://docs.google.com/spreadsheets/d/18I2J6h13k9dqOloi8ZuIYwBB-1LrZs-vU_WbqwYgH2Y/edit?gid=0#gid=0
+
+expositor11b-2 = https://docs.google.com/spreadsheets/d/1eIJNndVgbOxt1lWA-zpCcspHfOpCuZVI-Gmwr_og1hA/edit?gid=0#gid=0
+
+expositor11b-3 = https://docs.google.com/spreadsheets/d/17y7YTVcZdrEy_LpitvfB1MA0d7hVTWt-hSpJOlU2pSA/edit?gid=0#gid=0
+
+expositor11b-4 = https://docs.google.com/spreadsheets/d/1jiZdLmsndRnaRYc6_KoNGcGI4rrlzVJLNau51oB1wtg/edit?gid=0#gid=0
+
+expositor11b-5 = https://docs.google.com/spreadsheets/d/1LUKEq65DlZ0G0T52qOEVT3GjbpPUO-1LyP5iOkTUAAg/edit?gid=0#gid=0
+
+expositor11b-6 = https://docs.google.com/spreadsheets/d/1ZTrGrRItom3ahDWWFdgDg_HO8N2l_nZtf49lAxDfjJg/edit?gid=0#gid=0
+
+expositor11b-7 = https://docs.google.com/spreadsheets/d/10BJB1qsuJJM_bE0F-IzyjUebIZBqSJC6nhNOWvXBK60/edit?gid=0#gid=0
+
+expositor11b-8 = https://docs.google.com/spreadsheets/d/1IsA3WxFnxNeP8IHv4vdN-jIDZ-NKupCLR7HmbFDPKjo/edit?gid=0#gid=0
+
+expositor11b-9 = https://docs.google.com/spreadsheets/d/1z01hcKA_QtBopJgVTwyCjEQHp4hGbNHvoHWDL60TPxQ/edit?gid=0#gid=0
+
+expositor11b-10 = https://docs.google.com/spreadsheets/d/1Hc0tAo5ERXQWQP53zRhdp3P75R9Z-Opr_WGw1QTBrXU/edit?gid=0#gid=0
+
+expositor11b-11 = https://docs.google.com/spreadsheets/d/1RgWZMLLkbw0fk42ElPvBVo2SAX-suP4JeWIV1VrHC2Q/edit?gid=0#gid=0
+
+expositor11b-12 = https://docs.google.com/spreadsheets/d/1EGJFVA8cUTMHR7caPnq86NYE2t4eXoX2MIOosqX4DYU/edit?gid=0#gid=0
+
+expositor11b-13 = https://docs.google.com/spreadsheets/d/1OeAd26dmdA6Mr0CmJ7gIXK1Gd0mmfvJSFallUIpHlcM/edit?gid=0#gid=0
+
+expositor11b-14 = https://docs.google.com/spreadsheets/d/1mSI6g6VCXs_tV81qgDk6f9GaTreZt67mBrXrwdxcUz8/edit?gid=0#gid=0
+
+expositor11b-15 = https://docs.google.com/spreadsheets/d/184vyh_pePi0Vxwelr4qVWQ97BzU32pWee3mO-HIMyxY/edit?gid=0#gid=0
+
+expositor11b-16 = https://docs.google.com/spreadsheets/d/1gBpS_zd8Uj7rj4R-2N1yC73jfEOGEh4Tjw0fg4pOr9o/edit?gid=0#gid=0
+
+expositor11b-17 = https://docs.google.com/spreadsheets/d/1_iq1iQnK1foDeHHlG-108RV8CdO2n9lUdB9W2Bmsfg0/edit?gid=0#gid=0
+
+-- Expositor 15B -- 
+
+expositor15b-1 = https://docs.google.com/spreadsheets/d/1dHlETh1br9Tr4GtPiO2DGOWs9oCCElqLvNwpkQC178k/edit?gid=0#gid=0
+
+expositor15b-2 = https://docs.google.com/spreadsheets/d/185YzmGUs4I-zc9tvvCG4_m54CGCGvGr9xrMI56wMtDg/edit?gid=0#gid=0
+
+expositor15b-3 = https://docs.google.com/spreadsheets/d/1kH3PXBCGVxEZ7zVf1WgHDBwlAOO3ezaJmvfRNqn1jaM/edit?gid=0#gid=0
+
+expositor15b-4 = https://docs.google.com/spreadsheets/d/1hxjpHh2zxyrkMX54QSW_w7GyuCEe5menjYiG89W9ykA/edit?gid=0#gid=0
+
+expositor15b-5 = https://docs.google.com/spreadsheets/d/1tqdMcE3WP7v8CWdj9aIz5CHENxWazJfo0L8byKG0d20/edit?gid=0#gid=0
+
+expositor15b-6 = https://docs.google.com/spreadsheets/d/1osrBLjrdTHN8NIoysNmy0LPp1hWqA_i8AXpxtHewDqU/edit?gid=0#gid=0
+
+expositor15b-7 = https://docs.google.com/spreadsheets/d/1AgJhISY97kpT5EGdd9lvnCRrORrE0GfLN5PyBRTBf2Y/edit?gid=0#gid=0
+
+expositor15b-8 = https://docs.google.com/spreadsheets/d/1wSl_M_wMaljBXOIJsIz-7ehqhSedLL3wEFfvYoimwqE/edit?gid=0#gid=0
+
+expositor15b-9 = https://docs.google.com/spreadsheets/d/1HAkzgcixIVsIeEETTMFz3VbIXCC_CHn6K19aiN6ZAeU/edit?gid=0#gid=0
+
+expositor15b-10 = https://docs.google.com/spreadsheets/d/17dZ8VrGBAFWi4oQjYirbpgD6B0UCcyL_-zWHaq_JqO0/edit?gid=0#gid=0
+
+expositor15b-11 = https://docs.google.com/spreadsheets/d/1EOMYacoEfjxksjx54Ivcb2PS91PWwTjn265z_Zegj-k/edit?gid=0#gid=0
+
+expositor15b-12 = https://docs.google.com/spreadsheets/d/1KSaHp-6_SuY4Y0u3pzMSb1mLLOzNh1SpWA982_mFFbg/edit?gid=0#gid=0
+
+expositor15b-13 = https://docs.google.com/spreadsheets/d/1qp_pVZ_V2yK0-PUGid3z4dXeUzp74yVEK-5gYXgV-0k/edit?gid=0#gid=0
+
+expositor15b-14 = https://docs.google.com/spreadsheets/d/1EM3u-L3EbQg0UQtxvV-eKVQb57UlpzTt9rA4cbUeZIU/edit?gid=0#gid=0
+
+expositor15b-15 = https://docs.google.com/spreadsheets/d/1rqbvs2_iJIugDmluY68GBakoD5kexDwVJfKY7J064js/edit?gid=0#gid=0
+
+expositor15b-16 = https://docs.google.com/spreadsheets/d/1in4WOSFe9D3hLlkSEHA15yeZSqzL2oKmKlMxCHa6siE/edit?gid=0#gid=0
+
+expositor15b-17 = https://docs.google.com/spreadsheets/d/1t0qDidC7_wI8V0wS-tHZr7SlHRse5WpxIZ1ToWa7qn8/edit?gid=0#gid=0
+
+expositor15b-18 = https://docs.google.com/spreadsheets/d/1djC1n2EzTzKEaExRUPRT_qyBEeakcZpTTttjEpzAS7I/edit?gid=0#gid=0
+
+expositor15b-19 = https://docs.google.com/spreadsheets/d/1G91FpEoTLKH143TAEtKtU-6H10hH4uvTUU1Z3utE3u8/edit?gid=0#gid=0
+
+expositor15b-20 = https://docs.google.com/spreadsheets/d/1qhtIQfVWJoM_29rOgGlTH6IHiidV9-W6YgEyoPxH6Yk/edit?gid=0#gid=0
+
+expositor15b-21 = https://docs.google.com/spreadsheets/d/1-3Sv0yvhR3W5ixUFUZ-_OHIRQLPkjb5EgT1WD8bNRis/edit?gid=0#gid=0
+
+expositor15b-22 = https://docs.google.com/spreadsheets/d/1f7e1oZIi7RM0lt-Lw6S6aRwQ0eZu3b2bcA-RwUfct2c/edit?gid=0#gid=0
+
+expositor15b-23 = https://docs.google.com/spreadsheets/d/1PtV7u-SShHr08QYEaJYsO7cHJEVIjLhdr5H6Wqx9MrQ/edit?gid=0#gid=0
+
+expositor15b-24 = https://docs.google.com/spreadsheets/d/1W_cs312qfu9H-NW0-1KvfTIrJPRDryh8DW4jGsIH-hM/edit?gid=0#gid=0
+
+expositor15b-25 = https://docs.google.com/spreadsheets/d/15-jGH6IA_zlg5XPGmX-F0_8gp7JDIdmw-jv89-zOJkU/edit?gid=0#gid=0
+
+expositor15b-26 = https://docs.google.com/spreadsheets/d/11KQgwJdO3NU9sNYzKQGVPn4tgemT5OydvPuAEx99FTo/edit?gid=0#gid=0
+
+expositor15b-27 = https://docs.google.com/spreadsheets/d/1AM7ZkuNiLMPloiDjmM5XtRoRhtWjNJQfqDa1TQY5FYE/edit?gid=0#gid=0
+
+expositor15b-28 = https://docs.google.com/spreadsheets/d/1ueGogzeoEd-4r5xyh6qvwVSC5nMfK4RNy90YmoIYvOI/edit?gid=0#gid=0
+
+expositor15b-29 = https://docs.google.com/spreadsheets/d/1svW3dz4q8JTu9Xda9wSiw6ADFBOI0LsRqArwEPC9lxI/edit?gid=0#gid=0
+
+expositor15b-30 = https://docs.google.com/spreadsheets/d/1nIP9P7FsQbDAUXLjVWUAuyGxczz2RfNw7W1b_XfpjXw/edit?gid=0#gid=0
+
+expositor15b-31 = https://docs.google.com/spreadsheets/d/1NdOpLVy-o9IrGQ0QRFbZ_J632-HDTbJ9TMmFv2sOm1Q/edit?gid=0#gid=0
+
+
+
