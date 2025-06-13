@@ -54,14 +54,20 @@
             display: none;
         }
 
-        /* Estilos del header */
         header {
-            background-color: rgb(0, 0, 0);
-            color: #000000;
-            padding: 20px;
-            text-align: center;
-            padding-top: env(safe-area-inset-top); /* Asegura que el header no se superponga al notch */
-        }
+  background-color: black;
+  padding-top: 30px;    /* Cambia este valor para aumentar/reducir espacio arriba */
+  padding-bottom: 30px; /* Cambia este para abajo */
+  text-align: center;
+}
+
+header img {
+  width: 325px;        /* Tamaño fijo para la imagen */
+  height: auto;
+  display: inline-block;
+  margin: 0;           /* Sin márgenes extras */
+}
+
 
         /* Estilo general del cuerpo después de la carga */
         body.loaded {
